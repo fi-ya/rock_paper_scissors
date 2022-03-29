@@ -1,6 +1,6 @@
 ## Rock, Paper, Scissors
 
-A Sinatra application that will play rock, paper, scissors.
+A simple Sinatra application that will play rock, paper, scissors. The player inserts their move as URL parameter at the end of `http://localhost:4567/throw/`. Then computer will randomly pick a move and the final result will appear on the page. :rock: :page_with_curl: :scissors:
 
 ### To play 
 - Clone repository `git clone git@github.com:fi-ya/rock_paper_scissors.git`
