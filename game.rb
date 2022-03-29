@@ -3,14 +3,13 @@ require 'sinatra'
 # before we process a route, we'll set the response as
 # plain text and set up an array of viable moves that
 # a player (and the computer) can perform
-
-before do 
+before do
   content_type :txt
-  @defeat = {rock: :scissors, paper: :rock, scissors: :paper}
-  @thros = @defeat.keys
+  @defeat = { rock: :scissors, paper: :rock, scissors: :paper }
+  @throws = @defeat.keys
 end
 
-get '/throw/:type' do 
+get '/throw/:type' do
   # the params[] hash stores querystring and form data.
   player_throw = params[:type].to_sym
 
@@ -33,4 +32,3 @@ get '/throw/:type' do
     "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
   end
 end
-
